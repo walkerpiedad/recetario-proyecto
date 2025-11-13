@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recetario de Comidas Caseras</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #f3e5ab, #e0c097);
+      color: #333;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 1s ease-in;
+    }
+
+    header {
+      background-color: #8b5e3c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .categoria {
+      padding: 30px;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #fff8ef;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    td {
+      padding: 20px;
+      text-align: center;
+      border: 2px solid #d4b483;
+      border-radius: 10px;
+    }
+
+    img {
+      width: 200px;
+      height: 150px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+
+    h2 {
+      color: #5b3a29;
+    }
+
+    /* Animación */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    footer {
+      background-color: #8b5e3c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    iframe {
+      border-radius: 15px;
+      width: 90%;
+      height: 300px;
+      border: none;
+    }
+
+    /* Redes sociales */
+    .redes {
+      margin-top: 20px;
+    }
+
+    .redes a {
+      margin: 0 10px;
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+
+    .redes img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .redes a:hover {
+      transform: scale(1.2);
+    }
+
+    /* Formulario */
+    form {
+      background-color: #fff8ef;
+      border: 2px solid #8b5e3c;
+      border-radius: 15px;
+      padding: 25px;
+      width: 80%;
+      max-width: 500px;
+      margin: 20px auto;
+      text-align: left;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+      color: #5b3a29;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      background-color: #8b5e3c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #6f462a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Recetario de Comidas Caseras</h1>
+    <nav>
+      <ul>
+        <li><a href="#desayunos">Desayunos</a></li>
+        <li><a href="#comidas">Comidas</a></li>
+        <li><a href="#cenas">Cenas</a></li>
+        <li><a href="#promociones">Promociones</a></li>
+        <li><a href="#sucursales">Sucursales</a></li>
+        <li><a href="#registro">Registro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- DESAYUNOS -->
+    <section id="desayunos" class="categoria">
+      <h2>Desayunos</h2>
+      <table>
+        <tr>
+          <td>
+            <img src="panque.jpg" alt="Panqueques con miel">
+            <h3>Panqueques con miel</h3>
+            <p>Esponjosos panqueques servidos con miel y frutas frescas.</p>
+          </td>
+          <td>
+            <img src="Aguacate.jpg" alt="Tostadas con aguacate">
+            <h3>Tostadas con aguacate</h3>
+            <p>Pan integral con aguacate, huevo y un toque de limón.</p>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- COMIDAS -->
+    <section id="comidas" class="categoria">
+      <h2>Comidas</h2>
+      <table>
+        <tr>
+          <td>
+            <img src="Ensalada.jpg" alt="Ensalada César">
+            <h3>Ensalada César</h3>
+            <p>Lechuga, pollo a la parrilla y aderezo cremoso.</p>
+          </td>
+          <td>
+            <img src="Pasta.jpg" alt="Pasta a la boloñesa">
+            <h3>Pasta a la boloñesa</h3>
+            <p>Pasta italiana con salsa de tomate y carne molida.</p>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- CENAS -->
+    <section id="cenas" class="categoria">
+      <h2>Cenas</h2>
+      <table>
+        <tr>
+          <td>
+            <img src="Sopa.jpg" alt="Sopa de verduras">
+            <h3>Sopa de verduras</h3>
+            <p>Caliente y nutritiva, ideal para las noches frías.</p>
+          </td>
+          <td>
+            <img src="Pollo.jpg" alt="Tacos de pollo">
+            <h3>Tacos de pollo</h3>
+            <p>Tortillas de maíz rellenas de pollo, verduras y salsa.</p>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- PROMOCIONES -->
+    <section id="promociones" class="categoria">
+      <h2>Descuentos y Promociones</h2>
+      <table>
+        <tr>
+          <td>
+            <img src="Desayunos.jpg" alt="Descuento en desayunos">
+            <h3>Descuento del 20% en Desayunos</h3>
+            <p>Disfruta de nuestros deliciosos desayunos con un 20% de descuento toda la semana.</p>
+          </td>
+          <td>
+            <img src="Comida.jpg" alt="Promoción de comidas">
+            <h3>2x1 en Comidas Caseras</h3>
+            <p>Elige tus platos favoritos y lleva otro totalmente gratis. ¡Ideal para compartir!</p>
+          </td>
+          <td>
+            <img src="Cena.jpg" alt="Promoción de cenas">
+            <h3>Promoción de Cenas con Bebidas Gratis</h3>
+            <p>En la compra de cualquier cena llévate una bebida gratis.</p>
+          </td>
+          <td>
+            <img src="Bufet.jpg" alt="Promoción especial del mes">
+            <h3>Oferta Especial del Mes</h3>
+            <p>Este mes disfruta de combos saludables a precios reducidos.</p>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- SUCURSALES -->
+    <section id="sucursales" class="categoria">
+      <h2>Nuestras Sucursales</h2>
+      <p>Actualmente contamos con nuestra sucursal principal en San Luis Potosí:</p>
+      <h3>📍 Italia 98, Providencia, 78390 San Luis Potosí, S.L.P.</h3>
+      <iframe src="https://www.google.com/maps?q=Italia+98,+Providencia,+78390+San+Luis+Potosí,+S.L.P.&output=embed"></iframe>
+    </section>
+
+    <!-- REGISTRO -->
+    <section id="registro" class="categoria">
+      <h2>Regístrate para recibir recetas y promociones 🍽️</h2>
+      <form onsubmit="alert('¡Registro enviado con éxito! Gracias por unirte 🍴'); return false;">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" placeholder="Tu nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
+
+        <label for="opcion">¿Qué te interesa?</label>
+        <select id="opcion">
+          <option value="recetas">Recetas semanales</option>
+          <option value="promociones">Promociones y descuentos</option>
+          <option value="clases">Clases de cocina</option>
+        </select>
+
+        <label for="comentarios">Comentarios (opcional):</label>
+        <textarea id="comentarios" rows="3" placeholder="Cuéntanos qué te gustaría aprender..."></textarea>
+
+        <button type="submit">Enviar Registro</button>
+      </form>
+    </section>
+
+    <!-- SOBRE EL SITIO -->
+    <section id="sobre" class="categoria">
+      <h2>Sobre el Sitio Web</h2>
+      <p>
+        Este sitio web fue creado con el propósito de compartir <strong>recetas caseras</strong> fáciles, nutritivas y deliciosas,
+        ideales para personas que desean disfrutar de una buena comida sin complicaciones.
+      </p>
+      <p>
+        Su objetivo principal es ofrecer un espacio donde los usuarios puedan <strong>aprender nuevas recetas</strong>,
+        aprovechar <strong>promociones exclusivas</strong> y conocer las <strong>sucursales</strong> de nuestro negocio de forma rápida.
+      </p>
+      <p>
+        Este proyecto busca solucionar el problema de la falta de tiempo y de ideas al cocinar, ofreciendo una guía práctica
+        y accesible para preparar platillos en casa. También fomenta una comunidad que disfruta de la cocina tradicional
+        y el sabor de lo hecho en casa 🍲❤️.
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Recetario de Comidas Caseras | Todos los derechos reservados</p>
+
+    <div class="redes">
+      <p>Síguenos en nuestras redes sociales:</p>
+      <a href="https://www.facebook.com" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com" target="_blank"><img src="instagram.jpg" alt="Instagram"></a>
+      <a href="https://www.tik tok.com" target="_blank"><img src="tik tok.png" alt="tik tok"></a>
+      <a href="https://www.youtube.com" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+    </div>
+  </footer>
+
+  <!-- CHATBOT -->
+  <script>
+    // Crear el contenedor del chatbot
+    const chatbotButton = document.createElement('div');
+    chatbotButton.innerHTML = "💬";
+    chatbotButton.style.position = "fixed";
+    chatbotButton.style.bottom = "20px";
+    chatbotButton.style.right = "20px";
+    chatbotButton.style.backgroundColor = "#8b5e3c";
+    chatbotButton.style.color = "white";
+    chatbotButton.style.fontSize = "28px";
+    chatbotButton.style.borderRadius = "50%";
+    chatbotButton.style.width = "60px";
+    chatbotButton.style.height = "60px";
+    chatbotButton.style.display = "flex";
+    chatbotButton.style.alignItems = "center";
+    chatbotButton.style.justifyContent = "center";
+    chatbotButton.style.cursor = "pointer";
+    chatbotButton.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+    document.body.appendChild(chatbotButton);
+
+    const chatBox = document.createElement('div');
+    chatBox.style.position = "fixed";
+    chatBox.style.bottom = "90px";
+    chatBox.style.right = "20px";
+    chatBox.style.width = "300px";
+    chatBox.style.height = "400px";
+    chatBox.style.background = "#fff8ef";
+    chatBox.style.border = "2px solid #8b5e3c";
+    chatBox.style.borderRadius = "10px";
+    chatBox.style.display = "none";
+    chatBox.style.flexDirection = "column";
+    chatBox.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+    chatBox.innerHTML = `
+      <div style="background:#8b5e3c; color:white; padding:10px; border-radius:8px 8px 0 0; text-align:center;">
+        Chat del Recetario 👩‍🍳
+      </div>
+      <div id="chatLog" style="flex:1; padding:10px; overflow-y:auto; font-size:14px;"></div>
+      <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." style="border:none; border-top:1px solid #ccc; padding:10px; width:100%; border-radius:0 0 8px 8px;">
+    `;
+    document.body.appendChild(chatBox);
+
+    chatbotButton.addEventListener('click', () => {
+      chatBox.style.display = chatBox.style.display === "none" ? "flex" : "none";
+    });
+
+    const chatInput = chatBox.querySelector("#chatInput");
+    const chatLog = chatBox.querySelector("#chatLog");
+
+    chatInput.addEventListener('keypress', (e) => {
+      if (e.key === "Enter" && chatInput.value.trim() !== "") {
+        const userMsg = chatInput.value.trim();
+        chatLog.innerHTML += `<p><strong>Tú:</strong> ${userMsg}</p>`;
+        chatInput.value = "";
+
+        // Respuestas básicas
+        let respuesta = "No entiendo muy bien 😅, pero puedo ayudarte con recetas o promociones.";
+        if (userMsg.toLowerCase().includes("hola")) respuesta = "¡Hola! 👋 ¿Quieres conocer nuestras promociones o recetas?";
+        if (userMsg.toLowerCase().includes("receta")) respuesta = "Puedes visitar las secciones de Desayunos, Comidas o Cenas 🍽️ para ver nuestras recetas.";
+        if (userMsg.toLowerCase().includes("promocion")) respuesta = "Tenemos 2x1 en comidas y bebidas gratis con las cenas 🥤.";
+        if (userMsg.toLowerCase().includes("gracias")) respuesta = "¡De nada! 😊 Espero que disfrutes nuestras recetas caseras.";
+
+        setTimeout(() => {
+          chatLog.innerHTML += `<p><strong>Bot:</strong> ${respuesta}</p>`;
+          chatLog.scrollTop = chatLog.scrollHeight;
+        }, 500);
+      }
+    });
+  </script>
+</body>
+</html>
