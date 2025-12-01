@@ -239,7 +239,7 @@
       <table>
         <tr>
           <td>
-            <img src="Desayunos.jpg" alt="Descuento en desayunos">
+            <img src="Desayuno.jpg" alt="Descuento en desayunos">
             <h3>Descuento del 20% en Desayunos</h3>
             <p>Disfruta de nuestros deliciosos desayunos con un 20% de descuento toda la semana.</p>
           </td>
@@ -327,73 +327,25 @@
   </footer>
 
   <!-- CHATBOT -->
-  <script>
-    // Crear el contenedor del chatbot
-    const chatbotButton = document.createElement('div');
-    chatbotButton.innerHTML = "💬";
-    chatbotButton.style.position = "fixed";
-    chatbotButton.style.bottom = "20px";
-    chatbotButton.style.right = "20px";
-    chatbotButton.style.backgroundColor = "#8b5e3c";
-    chatbotButton.style.color = "white";
-    chatbotButton.style.fontSize = "28px";
-    chatbotButton.style.borderRadius = "50%";
-    chatbotButton.style.width = "60px";
-    chatbotButton.style.height = "60px";
-    chatbotButton.style.display = "flex";
-    chatbotButton.style.alignItems = "center";
-    chatbotButton.style.justifyContent = "center";
-    chatbotButton.style.cursor = "pointer";
-    chatbotButton.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
-    document.body.appendChild(chatbotButton);
-
-    const chatBox = document.createElement('div');
-    chatBox.style.position = "fixed";
-    chatBox.style.bottom = "90px";
-    chatBox.style.right = "20px";
-    chatBox.style.width = "300px";
-    chatBox.style.height = "400px";
-    chatBox.style.background = "#fff8ef";
-    chatBox.style.border = "2px solid #8b5e3c";
-    chatBox.style.borderRadius = "10px";
-    chatBox.style.display = "none";
-    chatBox.style.flexDirection = "column";
-    chatBox.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
-    chatBox.innerHTML = `
-      <div style="background:#8b5e3c; color:white; padding:10px; border-radius:8px 8px 0 0; text-align:center;">
-        Chat del Recetario 👩‍🍳
-      </div>
-      <div id="chatLog" style="flex:1; padding:10px; overflow-y:auto; font-size:14px;"></div>
-      <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." style="border:none; border-top:1px solid #ccc; padding:10px; width:100%; border-radius:0 0 8px 8px;">
-    `;
-    document.body.appendChild(chatBox);
-
-    chatbotButton.addEventListener('click', () => {
-      chatBox.style.display = chatBox.style.display === "none" ? "flex" : "none";
-    });
-
-    const chatInput = chatBox.querySelector("#chatInput");
-    const chatLog = chatBox.querySelector("#chatLog");
-
-    chatInput.addEventListener('keypress', (e) => {
-      if (e.key === "Enter" && chatInput.value.trim() !== "") {
-        const userMsg = chatInput.value.trim();
-        chatLog.innerHTML += `<p><strong>Tú:</strong> ${userMsg}</p>`;
-        chatInput.value = "";
-
-        // Respuestas básicas
-        let respuesta = "No entiendo muy bien 😅, pero puedo ayudarte con recetas o promociones.";
-        if (userMsg.toLowerCase().includes("hola")) respuesta = "¡Hola! 👋 ¿Quieres conocer nuestras promociones o recetas?";
-        if (userMsg.toLowerCase().includes("receta")) respuesta = "Puedes visitar las secciones de Desayunos, Comidas o Cenas 🍽️ para ver nuestras recetas.";
-        if (userMsg.toLowerCase().includes("promocion")) respuesta = "Tenemos 2x1 en comidas y bebidas gratis con las cenas 🥤.";
-        if (userMsg.toLowerCase().includes("gracias")) respuesta = "¡De nada! 😊 Espero que disfrutes nuestras recetas caseras.";
-
-        setTimeout(() => {
-          chatLog.innerHTML += `<p><strong>Bot:</strong> ${respuesta}</p>`;
-          chatLog.scrollTop = chatLog.scrollHeight;
-        }, 500);
-      }
-    });
-  </script>
+ <script>
+  window.addEventListener('mouseover', initLandbot, { once: true });
+  window.addEventListener('touchstart', initLandbot, { once: true });
+  var myLandbot;
+  function initLandbot() {
+    if (!myLandbot) {
+      var s = document.createElement('script');
+      s.type = "module"
+      s.async = true;
+      s.addEventListener('load', function() {
+        myLandbot = new Landbot.Popup({
+          configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-3232107-2RO4YDM41PP85EOF/index.json',
+        });
+      });
+      s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs';
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+  }
+</script>
 </body>
 </html>
